@@ -1,5 +1,23 @@
+<mat-sidenav-container>
+  <mat-sidenav #menu rol="navigation">
+    <p>Elemento Side Nav</p>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="menu.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Libro Market</span>
+      <div>
+        <a routerLink="registrar">Registrar Usuario</a>
+        <a routerLink="login">Login</a>
+        <a routerLink="">Home</a>
 
-<button mat-button color="warn">Mi primer boton</button>
+      </div>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
 
-
-
+  </mat-sidenav-content>
+</mat-sidenav-container>
