@@ -16,10 +16,10 @@ export class SeguridadService {
     username: '',
     email: '',
     usuarioid: '',
-    password:''
+    password: ''
   };
 
-  constructor(private router : Router) { }
+  constructor(private router: Router) { }
 
   registrarUsuario(usr: Usuario) {
     this.usuario = {
@@ -43,7 +43,7 @@ export class SeguridadService {
       apellidos: '',
       usuarioid: Math.round(Math.random() * 1000).toString(),
       username: '',
-      password:''
+      password: ''
 
     };
     this.segurdidadCambio.next(true);
@@ -57,7 +57,7 @@ export class SeguridadService {
       username: '',
       email: '',
       usuarioid: '',
-      password:''
+      password: ''
 
     }
 
@@ -68,6 +68,10 @@ export class SeguridadService {
   obtenerUsuario() {
 
     return { ...this.usuario };
+  }
+
+  onSesion() {
+    return this.usuario != null;
   }
 
 }
