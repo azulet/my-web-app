@@ -1,0 +1,39 @@
+a {
+  text-decoration: none;
+  color: #B71C1C;
+  display: flex;
+  align-items: center;
+}
+
+a:hover,
+a:active {
+  color: #E57373
+}
+
+
+
+.navegacion-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+
+.navegacion-list-label {
+  padding-left: 6px;
+  font-size: 16px; /* Adjust to match icon size */
+  line-height: 24px; /* Match this with the icon size */
+  display: inline-block;
+  vertical-align: middle; /* Aligns text vertically with the icon */
+}
+a mat-icon {
+  font-size: 24px; /* Adjust if needed */
+  vertical-align: middle; /* Ensures the icon is vertically centered */
+}
+
+ mat-icon {
+  font-size: 24px; /* Adjust if needed */
+  vertical-align: middle; /* Ensures the icon is vertically centered */
+}

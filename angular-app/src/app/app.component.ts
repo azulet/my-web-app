@@ -1,5 +1,5 @@
 import { UsuarioComponent } from './usuario/usuario.component';
-import { Component } from '@angular/core';
+import { Component, EventEmitter,Output } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { LibrosComponent } from './libros/libros.component';
@@ -13,14 +13,19 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { CommonModule } from '@angular/common';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import { BarraComponent } from "./navegacion/barra/barra.component";
+import { MenuListaComponent } from "./navegacion/menu-lista/menu-lista.component";
+import { SeguridadService } from './services/seguridad/seguridad.service';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatToolbarModule, MatSidenavModule, CommonModule,FlexLayoutModule,RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule,LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent,AppComponent, RouterLink],
-  providers: [LibrosService],
+  imports: [MatListModule, MatToolbarModule, MatSidenavModule, CommonModule, FlexLayoutModule, RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule, LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent, AppComponent, RouterLink, BarraComponent, MenuListaComponent],
+  //exportAs:[MatListModule, MaterialComponent,MatToolbarModule,MatSidenavModule,CommonModule],
+  providers: [LibrosService, SeguridadService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

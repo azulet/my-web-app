@@ -8,16 +8,5 @@ mat-sidenav {
   width: 250px;
 }
 
-a {
-  text-decoration: none;
-  color: #B71C1C;
-}
 
-a:hover, a:active {
- color: #E57373
-}
 
-mat-toolbar {
-  background-color: #ffd9e1;
-  color: #B71C1C ;
-}
