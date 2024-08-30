@@ -5,10 +5,13 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule ({
- imports : [MatButtonModule, MatIcon, MatInputModule,MatFormFieldModule,MatCardModule,MatTableModule],
- exports: [MatButtonModule, MatIcon, MatInputModule,MatFormFieldModule,MatCardModule,MatTableModule]
+ imports : [MatDialogModule,MatSortModule,MatButtonModule, MatIcon, MatInputModule,MatFormFieldModule,MatCardModule,MatTableModule, MatPaginatorModule],
+ exports: [MatDialogModule,MatSortModule,MatButtonModule, MatIcon, MatInputModule,MatFormFieldModule,MatCardModule,MatTableModule, MatPaginatorModule]
 
 })
 

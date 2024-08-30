@@ -19,15 +19,18 @@ import { MenuListaComponent } from "./navegacion/menu-lista/menu-lista.component
 import { SeguridadService } from './services/seguridad/seguridad.service';
 import { SeguridadRouter } from './services/seguridad/seguridad.router';
 import { BooksService } from './services/books/books-service.service';
+import { BooksComponent } from './books/books.component';
+import {BookNewComponent} from './books/book-new.component';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatListModule, MatToolbarModule, MatSidenavModule, CommonModule, FlexLayoutModule, RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule, LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent, AppComponent, RouterLink, BarraComponent, MenuListaComponent],
+  imports: [BookNewComponent, BooksComponent, MatListModule, MatToolbarModule, MatSidenavModule, CommonModule, FlexLayoutModule, RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule, LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent, AppComponent, RouterLink, BarraComponent, MenuListaComponent],
   //exportAs:[MatListModule, MaterialComponent,MatToolbarModule,MatSidenavModule,CommonModule],
   providers: [LibrosService, SeguridadService, SeguridadRouter, BooksService],
+  //entryComponents: [BookNewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
