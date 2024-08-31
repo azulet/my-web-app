@@ -51,7 +51,7 @@ export class BooksComponent implements OnInit, AfterViewInit {
   }
 
   abrirDialogo() {
-    this.dialog.open(BookNewComponent);
+    this.dialog.open(BookNewComponent, {width:'350px'});
   }
 
 }
