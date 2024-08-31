@@ -1,5 +1,6 @@
 import { Books } from './../../books/books.model';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 
 @Injectable({
@@ -51,7 +52,19 @@ export class BooksService {
 
   constructor() { }
 
-  obtenerLibros () {
-    return this.booksLista.slice();
+    bookSubjet = new Subject<Books[]>();
+
+  obtenerLibros() {
+    console.log('obtener lista');
+    return [...this.booksLista];
+   // return this.booksLista.slice();
   }
+
+  guardarLibro(book: Books) {
+    console.log('book' + book.fechaPublicacion);
+    this.booksLista.push(book);
+    this.bookSubjet.next(this.booksLista);
+    console.log('added' + this.booksLista.length);
+  }
+
 }
