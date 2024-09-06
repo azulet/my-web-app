@@ -57,14 +57,17 @@ export class BooksService {
   obtenerLibros() {
     console.log('obtener lista');
     return [...this.booksLista];
-   // return this.booksLista.slice();
+    // return this.booksLista.slice();
   }
 
   guardarLibro(book: Books) {
     console.log('book' + book.fechaPublicacion);
+    console.log('before added' + this.booksLista.length);
     this.booksLista.push(book);
-    this.bookSubjet.next(this.booksLista);
     console.log('added' + this.booksLista.length);
+    this.bookSubjet.next(this.booksLista);
+   // this.bookSubjet.next([...this.booksLista]);
+
   }
 
 }

@@ -25,9 +25,9 @@
           <mat-form-field style="width: 100%;">
             <mat-label>Seleccione al autor</mat-label>
             <mat-select [(ngModel)]="selectAutor" name="autor" (selectionChange)="selected($event)">
-              <mat-option value="1">Artur Conan</mat-option>
-              <mat-option value="2">George R.R. Martin</mat-option>
-              <mat-option value="3">Gabriel Garcia Marquez</mat-option>
+              <mat-option *ngFor="let atr of autores" value="atr.autorId">
+               {{atr.nombre + ' ' + atr.apellido}}
+              </mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -47,6 +47,6 @@
     <button mat-button  type="submit">Guardar</button>
   </mat-dialog-actions>
   <mat-dialog-actions>
-    <button mat-button [mat-dialog-close]="true">Cerrar</button>
+    <button mat-button [mat-dialog-close]="true" >Cerrar</button>
   </mat-dialog-actions>
 </form>

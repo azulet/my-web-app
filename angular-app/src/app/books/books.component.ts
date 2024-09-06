@@ -55,15 +55,25 @@ export class BooksComponent implements OnInit, AfterViewInit, OnDestroy {
       this.dataSource.data = this.bookService.obtenerLibros();
 
     });
+    //this.dataSource.data = this.bookService.obtenerLibros();
     console.log('lista' + this.dataSource.data);
   }
+
 
   ngOnDestroy(): void {
     this.bookSuscrition.unsubscribe();
   }
 
   abrirDialogo() {
-    this.dialog.open(BookNewComponent, { width: '350px' });
+    //this.dialog.open(BookNewComponent, { width: '350px' });
+    const dialogRef = this.dialog.open(BookNewComponent, { width: '350px' });
+    dialogRef.afterClosed().subscribe(() => {
+      // Actualiza los datos después de que el modal se cierra
+      this.dataSource.data = this.bookService.obtenerLibros();
+      console.log('Datos actualizados después de cerrar el modal:', this.dataSource.data);
+    });
   }
+
+
 
 }
