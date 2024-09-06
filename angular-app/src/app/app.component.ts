@@ -23,15 +23,16 @@ import { BooksComponent } from './books/books.component';
 import {BookNewComponent} from './books/book-new.component';
 import { MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatDatepickerModule, MatDatepicker} from '@angular/material/datepicker';
+import { HttpClient } from '@angular/common/http';
 
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [MatDatepickerModule, MatNativeDateModule, BookNewComponent, BooksComponent, MatListModule, MatToolbarModule, MatSidenavModule, CommonModule, FlexLayoutModule, RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule, LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent, AppComponent, RouterLink, BarraComponent, MenuListaComponent],
+  imports: [  MatDatepickerModule, MatNativeDateModule, BookNewComponent, BooksComponent, MatListModule, MatToolbarModule, MatSidenavModule, CommonModule, FlexLayoutModule, RegistrarComponent, LoginComponent, MaterialComponent, RouterOutlet, FormsModule, LibrosComponent, LibroComponent, UsuarioComponent, InicioComponent, AppComponent, RouterLink, BarraComponent, MenuListaComponent],
   //exportAs:[MatListModule, MaterialComponent,MatToolbarModule,MatSidenavModule,CommonModule],
-  providers: [LibrosService, SeguridadService, SeguridadRouter, BooksService, MatNativeDateModule, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
+  providers: [HttpClient, LibrosService, SeguridadService, SeguridadRouter, BooksService, MatNativeDateModule, { provide: MAT_DATE_LOCALE, useValue: 'es-ES' }],
   //entryComponents: [BookNewComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
