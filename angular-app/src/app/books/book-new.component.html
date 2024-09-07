@@ -26,7 +26,7 @@
             <mat-label>Seleccione al autor</mat-label>
             <mat-select [(ngModel)]="selectAutor" name="autor" (selectionChange)="selected($event)">
               <mat-option *ngFor="let atr of autores" value="atr.autorId">
-               {{atr.nombre + ' ' + atr.apellido}}
+               {{atr.Nombre + ' ' + atr.Apellido}}
               </mat-option>
             </mat-select>
           </mat-form-field>

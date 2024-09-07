@@ -1,4 +1,9 @@
-<mat-table [dataSource]="dataSource">
+<!-- //<mat-table [dataSource]="dataSource"> -->
+  <mat-table [dataSource]="dataSource">
+  <!-- <ng-container matColumnDef="autorId">
+    <mat-header-cell *matHeaderCellDef> ID </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.autorId}} </mat-cell>
+  </ng-container> -->
 
   <ng-container matColumnDef="nombre">
     <mat-header-cell *matHeaderCellDef>Nombre </mat-header-cell>
